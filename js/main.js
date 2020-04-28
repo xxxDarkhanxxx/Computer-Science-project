@@ -11,7 +11,8 @@ const totalMoneyIncome = document.querySelector(".total__money-income"),
   operationName = document.querySelector(".operation__name");
 
 /* База данных и сохранение их, позже обрабатывает в init() */
-let dbOperation = bOperation = JSON.parce(localStorage.getItem('calc')) || [];
+let dbOperation = JSON.parse(localStorage.getItem('calc')) || [];
+
 
 
 /* Рендер массива */
@@ -50,7 +51,7 @@ const updateBalance = () => {
 
 };
 
-/* Добавление таблички или строки*/
+/* Добавление строки и цвет этой таблички с borderom*/
 
 const addOperation = (event) => {
   event.preventDefault();
